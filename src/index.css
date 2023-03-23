@@ -1,13 +1,106 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: rgb(238, 174, 202);
+  background: linear-gradient(
+    90deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+
+.app_container::-webkit-scrollbar {
+  width: 10px; /* width of the entire scrollbar */
+}
+
+.app_container::-webkit-scrollbar-thumb {
+  background-color: rgba(238, 174, 202, 1); /* color of the scroll thumb */
+  border-radius: 12px;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+}
+
+.app_container {
+  background-color: #f7f7f7;
+  margin: 3rem 3rem;
+  padding: 2rem;
+  box-shadow: 10px 10px 283px -53px rgba(0, 0, 0, 0.75);
+  border-radius: 12px;
+  height: 85vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.contacto_container {
+  border: 2px solid #d2d2d2;
+  margin: 0.4rem;
+  padding: 0.2rem 1rem;
+  border-radius: 12px;
+}
+
+.add_contact_button {
+  padding: 0.3rem 1rem;
+  background: rgb(238, 174, 202);
+  background: linear-gradient(
+    90deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  border: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.add_contact_button:hover {
+  opacity: 0.8;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.form label {
+  margin: 1rem 0;
+}
+
+.form label span {
+  display: inline-block;
+  width: 80px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.form label input {
+  font-family: "Open Sans", sans-serif;
+  min-width: 300px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #c2c2c2;
+  outline: none;
+}
+
+@media (max-width: 535px) {
+  header {
+    flex-direction: column;
+  }
+
+  .app_container {
+    margin: 1rem 1rem;
+  }
 }
